@@ -1,7 +1,0 @@
-try running ./Application GreenScreenSample.ppm frame.ppm output.ppm 90
-
-ppm files are old image files, try
-
-convert filename.ppm filename.jpg
-
-and then you can use standard programs to view the images
