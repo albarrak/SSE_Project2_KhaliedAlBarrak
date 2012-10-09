@@ -27,8 +27,8 @@ $(EXE): $(OBI)
 profile: $(OBI)
 	@echo "Profiling the code"
 	$(CC) $(CFLAGS) $(EXE) $(OBI) -lm -g -pg
-#	App.exe frame.ppm GreenScreenSample.ppm $(ImageName) 40 | Second step manually
-#	gprof App.exe gmon.out					| Third step manually
+	./App frame.ppm GreenScreenSample.ppm $(ImageName) 40 
+	gprof App.exe gmon.out					
 
 debug: $(OBI)
 	echo "Debug the code using -Wall"
@@ -54,8 +54,8 @@ test3: $(SRCTest3) $(OBITest3)
 	$(CC) -c $(OptFLAG) $< -o $@
 
 run:
-	@echo "Finish Running"
+	@echo "Running the exe file"
 	./App GreenScreenSample.ppm frame.ppm $(ImageName) 40
 clean:
-#	del *.o *.exe gmon.out $(ImageName) test*  | used for Windows
+#	del *.o *.exe gmon.out $(ImageName) test*  
 	rm *.o App gmon.out $(ImageName) test*

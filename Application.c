@@ -62,5 +62,5 @@ int main(int argc, char **argv)
   // Save the image
   SaveImage(argv[3],thresholded_image) ;
 
-  
+return 0;  
 }

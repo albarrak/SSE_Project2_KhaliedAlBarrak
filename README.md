@@ -48,8 +48,8 @@ The Makefile:
 	d - Normal mode
 	e - testing mode
  2- Running the code:
-	- This is useful since for checking if the code has been compiled correctly or not, but when you use it you may get an error massage in your terminal
-	Since "make" not usually used for running the code. Though, if found the very usful even if it produces a small error that has not real effect.
+	- This is useful since for checking if the code has been compiled correctly or not or you want to just run it; since I found that
+	very usful and it will save a lot of time
  3- Cleaning the code :
 	- This will clean everything except the source code files, README files and Makefile
 --------------
@@ -63,8 +63,7 @@ debug			|	make debug		|	- This will compile the project in a debugging mode usin
 				|					|	if it is needed.
 optimize		|	make optimize	|	- This will compile the project in a optimized mode (-O3) and that will make the exe file run faster
 profile			|	make profile	|	- This will compile the project in profiling mode (-g -pg) and this used for analyzing the performance of the functions
-				|					|	that ran during the execution. 
-				|					|	Note : after you "make profile" you may use "make Run" in order to produce the "gmon.out" file that contains all the info.
+				|					|	that ran during the execution. Then it will run the project and gprof it.
 				|					|	then type in the terminal: gprof ./App gmon.out, in order to view and check the analysis of your program
 test-all		|   make test-all	|	- This will running a python file the will run 3 available test to check some of the functions of the project				
 Run				|	make Run		|	- This will run the .exe file with this parameters: App GreenScreenSample.ppm frame.ppm $(ImageName) 40
